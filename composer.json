@@ -12,7 +12,9 @@
         "psr-4": {
             "": "class/"
         },
-        "files": []
+        "files": [
+            "./source/helper/script/env.php"
+        ]
     },
     "require": {
         "mizi/server-back": "^1.1"
