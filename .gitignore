@@ -2,3 +2,6 @@
 /vendor
 /.env
 /mx
+
+/boot.php
+/source/view
