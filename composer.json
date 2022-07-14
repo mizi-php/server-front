@@ -1,0 +1,13 @@
+{
+    "name": "mizi/server-front",
+    "description": "Servidor web frontend para aplicações MIZI",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "André Ricardo",
+            "email": "contatoadmx@gamil.com"
+        }
+    ],
+    "autoload": {},
+    "require": {}
+}
