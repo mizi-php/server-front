@@ -8,6 +8,13 @@
             "email": "contatoadmx@gamil.com"
         }
     ],
-    "autoload": {},
-    "require": {}
+    "autoload": {
+        "psr-4": {
+            "": "class/"
+        },
+        "files": []
+    },
+    "require": {
+        "mizi/server-back": "^1.1"
+    }
 }
