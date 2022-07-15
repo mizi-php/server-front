@@ -18,6 +18,6 @@
         ]
     },
     "require": {
-        "mizi/server-back": "^1.1"
+        "mizi/server-back": "^1.2"
     }
 }
