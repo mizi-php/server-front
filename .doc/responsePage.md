@@ -1,27 +1,30 @@
-### Sessão
+### InstanceResponsePage
 
-    use Mizi\Session;
+Controla a página de resposta da requisição
 
-A variavel de ambiente **SESSION_TIME** determina o tempo de vida da sessão em horas. O padrão é 24
+### Template
+Defina um template para a página com o metodo estatico **template**
 
-> Variaveis de sessão com nome iniciado em **#** serão tratadas como **FLASH** (podem ser recuperadas apenas uma vez)
+    InstanceResponsePage::template('viewName');
 
-**check**
-Verifica se uma variavel de sessão existe ou se tem um valor igual ao fornecido
+O template deve estar dentro da view **_page**
 
-    Session::check(string $name): bool
+Você pode definir variaveis de prepare especificas para a página de retorno
 
-**set**
-Define um valor para uma variavel de sessão
+    InstanceResponsePage::prepare('var','value');
 
-    Session::set(string $name, mixed $value = null): void
 
-**get**
-Retorna o valor de uma variavel de sessão
+### Enviando uma respsota
+Crie objeto de respota normalmente
 
-    Session::get(string $name): mixed
+    use Mizi\Response\InstanceResponsePage;
 
-**remove**
-Remove uma variavel de sessão
+    $response = new InstanceResponsePage('content')
 
-    Session::remove(string $name): void
+Ao enviar o objeto, o conteúdo será encapsulado dentro da view de template.
+
+### Middleware
+Existe uma middleware disponivel para garantir que a resposa seja uma ReponsePage.
+Para utiliza-la, chame-a em suas configurações de rota
+
+    Router::middleware('route',['page']);
