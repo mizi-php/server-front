@@ -13,7 +13,8 @@
             "": "class/"
         },
         "files": [
-            "./source/helper/script/env.php"
+            "./source/helper/script/env.php",
+            "./source/helper/script/view_prepare.php"
         ]
     },
     "require": {
