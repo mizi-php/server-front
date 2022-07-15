@@ -3,7 +3,7 @@
 namespace Mizi;
 
 use Exception;
-use Mizi\Instance\ResponseFile;
+use Mizi\Response\InstanceResponseFile;
 
 abstract class Assets
 {
@@ -25,7 +25,7 @@ abstract class Assets
     }
 
     /** Retorna o ResponseFile do arquivo */
-    protected static function getResponseFile(string $path, array $allowTypes): ResponseFile
+    protected static function getResponseFile(string $path, array $allowTypes): InstanceResponseFile
     {
         $path = [$path];
         foreach (Router::data() as $name => $value)
@@ -37,7 +37,7 @@ abstract class Assets
         if (!File::check($path) || !self::checkAllowType($path, $allowTypes))
             throw new Exception("file not found", STS_NOT_FOUND);
 
-        return (new ResponseFile)
+        return (new InstanceResponseFile)
             ->content($path);
     }
 
