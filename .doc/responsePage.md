@@ -22,3 +22,9 @@ Crie objeto de respota normalmente
     $response = new InstanceResponsePage('content')
 
 Ao enviar o objeto, o conteúdo será encapsulado dentro da view de template.
+
+### Middleware
+Existe uma middleware disponivel para garantir que a resposa seja uma ReponsePage.
+Para utiliza-la, chame-a em suas configurações de rota
+
+    Router::middleware('route',['page']);
