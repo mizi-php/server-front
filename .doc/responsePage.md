@@ -24,7 +24,14 @@ Crie objeto de respota normalmente
 Ao enviar o objeto, o conteúdo será encapsulado dentro da view de template.
 
 ### Middleware
-Existe uma middleware disponivel para garantir que a resposa seja uma ReponsePage.
-Para utiliza-la, chame-a em suas configurações de rota
+Para um objeto de página como resposta, use a middleware abaixo
 
-    Router::middleware('route',['page']);
+    function (callable $next)
+    {
+        $return = $next();
+
+        if (!is_class($return, InstanceResponse::class))
+            $return = new InstanceResponsePage($return);
+
+        return $return;
+    }
