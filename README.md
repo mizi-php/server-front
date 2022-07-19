@@ -8,6 +8,7 @@ Servidor web frontend para aplicações MIZI
 
 ### [Documentação](https://github.com/mizi-php/server-front/tree/main/.doc)
 
+ - [_constant](https://github.com/mizi-php/server-front/tree/main/.doc/_constant.md)
  - [_view](https://github.com/mizi-php/server-front/tree/main/.doc/_view.md)
  - [assets](https://github.com/mizi-php/server-front/tree/main/.doc/assets.md)
  - [cookie](https://github.com/mizi-php/server-front/tree/main/.doc/cookie.md)
